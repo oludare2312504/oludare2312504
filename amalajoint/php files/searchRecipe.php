@@ -17,12 +17,12 @@
             "<tr><td>Ingredients:</td><td> ". $row["Ingredients"]. "</td></tr> ".
             "<tr><td>Directions:</td><td> ". $row["Directions"]. "</td></tr></table>";
         }
-        echo "<h2><a href='home.html'>Click here to go back to home</a></h2>";
+        echo "<h2><a href='Homechef.html'>Click here to go back to home</a></h2>";
     }
     else 
     {
         echo "0 results";
-        echo "<h2><a href='home.html'>Click here to go back to home</a></h2>";
+        echo "<h2><a href='Homechef.html'>Click here to go back to home</a></h2>";
     }
     $db->close();
 ?>

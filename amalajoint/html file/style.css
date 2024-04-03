@@ -26,6 +26,7 @@ body{
     height: 600px;
     width: 100%;
     z-index: 1;
+   
 }
 .home-nav{
     background-color: #2c2a2a;
@@ -33,9 +34,6 @@ body{
     display: flex;
     justify-content: space-between;
 }
-
-
-
 .home-text{
     position: absolute;
     font-size: 70px;
@@ -49,16 +47,29 @@ body{
 }
 .about-text{
     position: absolute;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
     background-color:beige;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    -border-radius: 25px;
-    
+    border-radius: 25px;
+    padding: 20px; /* Reduce padding */
+    max-height: 70%; /* Set maximum height */
+    overflow-y: auto; /* Add vertical scroll if content exceeds maximum height */
+
+}
+
+/* Style for scrollbars */
+.about-text::-webkit-scrollbar {
+    width: 8px;
+}
+
+.about-text::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
 }
 .Ordernow{
     width: 200px;
@@ -102,9 +113,9 @@ body{
 }
 
 .homeimages>img{
-    width: 300px;
-    height: 300px;
-    margin: 20px;
+    width: 200px;
+    height: 200px;
+    margin: 12px;
 }
 .logo{
     height: 50px;
@@ -115,9 +126,13 @@ body{
     display:flex;
     margin:10px;
     padding-left: 50px;
-    padding-inline-start: 7%;
+    padding-inline-start: 2%;
 }
 
-    
+.about-test-inline{
+    display: flex;
+    padding-left: 30px;
+    margin-right: 50px;
+}   
 
 

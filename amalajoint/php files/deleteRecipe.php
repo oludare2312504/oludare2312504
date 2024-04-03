@@ -6,6 +6,6 @@
            
             $sql = "DELETE FROM recipemethod WHERE RecipeName='$RecipeName'" ;
             $result = $db->query($sql);
-            header("Location: home.html");
+            header("Location: homechef.html");
             $db->close();
         ?>

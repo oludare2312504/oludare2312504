@@ -16,11 +16,16 @@ include('connection.php');
     {   
         $sql = "INSERT INTO recipemethod (chefname,category,RecipeName,Ingredients,Directions) VALUES ('$chefname','$category','$RecipeName','$Ingredients','$Directions')";
         $result = mysqli_query($db, $sql);
+        
+        $db_host = 'localhost';
+        $db_user = 'root';
+        $db_password = '';
+        $db_name = 'amalajoint';
 
         if($result)
         {
             echo "Successfully";
-            header("Location: home.html");
+            header("Location: homechef.html");
         }
         else
         {
