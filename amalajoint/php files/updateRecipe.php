@@ -20,7 +20,7 @@ include('connection.php');
         if($result)
         {
             echo "Updated Successfully";
-            header("Location: home.html");
+            header("Location: homechef.html");
         }
         else
         {

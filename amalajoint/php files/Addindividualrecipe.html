@@ -37,29 +37,34 @@
               </div>
         </div>
     </nav>
-     <div class="first-container">
+    <div class="first-container">
         
         <div class="fader"></div>
         <div class="about-text">
             <div class="text_a">
-                <h3>AmalaJoint....  home from home</h3>
-                <p>
-
-Welcome to AmalaJoint, your home away from home for Nigerian cuisine.
-Our restaurant is a vibrant celebration of the rich culinary heritage of West Africa.
-
-<p>At AmalaJoint, we pride ourselves on offering a dining experience like no other.
-From the moment you step through our doors, you'll be transported to a world of
-bold flavors, warm hospitality, and unforgettable moments.</p>
-
-<p>Our menu features a mouthwatering selection of traditional Nigerian dishes,
-each prepared with the utmost care and attention to detail. From our signature Amala served with a variety of aromatic soups
-to our delectable assortment of grilled meats and savory sides,there's something to delight every palate at AmalaJoint.</p>
-
-<p>Our restaurant is more than just a place to enjoy delicious food—it's a gathering place for friends,
-family, and food lovers alike. Whether you're joining us for a casual meal with loved ones or celebrating
-a special occasion, you'll find a welcoming atmosphere and a sense of community that sets us apart.
-</p>
+                <h1>AMALAJOINT ADD NEW RECIPE</h1>
+    <br>
+    <h3>Add a New Recipe here</h3>
+    
+        <form method="post" action="AddindividualRecipe.php" enctype="multipart/form-data">
+            <label>Chef Name:</label>
+            <input type="text" name="chefname" /><br><br>
+            <label>Category:&nbsp;&nbsp;</label>
+            <input type="text" name="category" /> <br><br>
+            <label>Recipe Name:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="text" name="RecipeName" /> <br><br>
+            <label>Ingredients:&nbsp;&nbsp;&nbsp;</label>
+            <textarea name="Ingredient" id="Ingredient" rows="5" cols="100"> </textarea><br><br>
+            <label>Directions:&nbsp;&nbsp;&nbsp;</label>
+            <textarea name="Direction" id="Direction" rows="10" cols="100"> </textarea><br><br>
+            <label>Upload Image:</label>
+            <input type="file" name="image"><br><br> 
+            <input type="submit" name="submit" value="Submit" />
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" value="Reset" />
+        </form>
+        
             </div>
         </div>
         <img class="bg1" src="../html file/image/amala2.jpeg" alt="">

@@ -5,37 +5,37 @@
         <?php
             include('connection.php');
           
-             $RecipeName=$_POST['RecipeName'];
-             $sql = "SELECT * FROM recipemethod WHERE RecipeName='$RecipeName'";
+            $Grouprecipename=$_POST['Grouprecipename'];
+            $sql = "SELECT * FROM grouprecipe WHERE Grouprecipename='$Grouprecipename'";
                     $result = $db->query($sql);
 
                     if ($result->num_rows > 0) 
                     {
                         $row = $result->fetch_assoc();
                         
-                        $chefname=$row["chefname"];
-                        $category=$row["category"];
-                        $RecipeName=$row["RecipeName"];
-                        $Ingredients=$row["Ingredients"];
-                        $Directions=$row["Directions"];
+                        $chefname = $_POST['chefname'];
+                        $Grouprecipename = $_POST['Grouprecipename'];
+                        $Recipe1 = $_POST['Recipe1'];
+                        $Recipe2 = $_POST['Recipe2'];
+                        $Recipe3 = $_POST['Recipe3'];
 
                         echo"
                         <html>
                         <body>
-                        <form method='post' action='updateRecipe.php'>
+                        <form method='post' action='updategroupRecipe.php'>
                             <label>Chef Name:</label>
                             <input type='text' name='chefname' value='$chefname'/><br><br>
-                            <label>Category:&nbsp;&nbsp;</label>
-                            <input type='text' name='category' value='$category'/> <br><br>
-                            <label>Recipe Name:&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                            <input type='text' name='RecipeName' value='$RecipeName'/> <br><br>
-                            <label>Ingredients:&nbsp;&nbsp;&nbsp;</label>
-                            <textarea name='Ingredients' id='Ingredients' value=''  rows='5' cols='100'>".
-                            $row['Ingredients'].
+                            <label>Group recipe name:&nbsp;&nbsp;</label>
+                            <input type='text' name='Grouprecipename' value='$Grouprecipename'/> <br><br>
+                            <label>Recipe1:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type='text' name='Recipe1 ' value='$Recipe1'/> <br><br>
+                            <label>Recipe2:&nbsp;&nbsp;&nbsp;</label>
+                            <textarea name='Recipe2' id='Recipe2' value=''  rows='5' cols='100'>".
+                            $row['Recipe2'].
                             "</textarea><br><br>
-                            <label>Directions:&nbsp;&nbsp;&nbsp;</label>
-                            <textarea name='Directions' id='Directions' value='' rows='10' cols='100'>".
-                            $row['Directions'].
+                            <label>Recipe3:&nbsp;&nbsp;&nbsp;</label>
+                            <textarea name='Recipe3' id='Recipe3' value='' rows='10' cols='100'>".
+                            $row['Recipe3'].
                             "</textarea><br><br>
                             &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                             <input type='submit' name='submit' value='Submit' />

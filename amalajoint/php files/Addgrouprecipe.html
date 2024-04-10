@@ -12,18 +12,27 @@
         <div class="options">
             <div ><a href="../php files/home.php">Home</a></div>
             <div style="display: none;">Profile</div>
-            <div ><a href ="../php files/Group Recipee.php">Recipes</a></div>
-            <div ><a href ="../php files/about us.html">about us</a></div>
+            <div ><a href ="../php files/Group Recipee.php">Group Recipes</a></div>
+            <div ><a href ="../php files/Individual Recipe.php">Individual Recipes</a></div>
+            <div ><a href ="../php files/about us.html">about Us</a></div>
+            <div ><a href ="../php files/contact us.html">contact us</a></div>
             <!--<div style="color: #f86f14;">About Us</div>-->
             <!--<div class="auth">
                 <div>Sign Up</div>
             </div>-->
+            <div ><a href ="../php files/blog.html">blog</a></div>
             <div class="auth">
                 <div><a href="../php files/login.html" >Sign In</a></div>
                 <div style="display: none;">Log Out</div>
             </div>
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search...">
+            <form action="homesearch.php" method="GET">
+                <input type="text" name="query" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+
+</form>
+
                 
               </div>
         </div>
@@ -33,18 +42,26 @@
         <div class="fader"></div>
         <div class="about-text">
             <div class="text_a">
-                <h1>AMALAJOINT Home from home</h1>
-                <br><br>
-                <h3>You can Search for Chef here</h3>
-                <br><br>
-                    <form method="post" action="chefsearch.php">
-                        <label>Recipe Name:</label>
-                        <input type="text" name="Chefname" />
-                        <br><br>
-                        <input type="submit" name="submit" value="Search " />
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="button" value="Reset" />
-                    </form>
+                <h1>AMALAJOINT ADD NEW GROUP RECIPE</h1>
+    <br>
+      
+    <form method="post" action="addgroupRecipe.php" enctype="multipart/form-data">
+        <label>Chef Name:</label>
+        <input type="text" name="chefname" /><br><br>
+        <label>Group Recipe Name:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" name="Grouprecipename" /><br>
+        <label>Recipe 1:&nbsp;&nbsp;&nbsp;</label>
+        <textarea name="Recipe1" id="Recipe1" rows="1" cols="60"> </textarea><br><br>
+        <label>Recipe 2:&nbsp;&nbsp;&nbsp;</label><br>
+        <textarea name="Recipe2" id="Recipe2" rows="1" cols="60"> </textarea><br><br>
+        <label>Recipe 3:&nbsp;&nbsp;</label>
+        <textarea name="Recipe3" id="Recipe3" rows="1" cols="60"> </textarea><br><br>
+        <label>Upload Image:</label>
+        <input type="file" name="image"><br><br>
+        <input type="submit" name="submit" value="Submit" />
+        <input type="button" value="Reset" />
+    </form>
+        
             </div>
         </div>
         <img class="bg1" src="../html file/image/amala2.jpeg" alt="">

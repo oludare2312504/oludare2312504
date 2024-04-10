@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../html file/style.css">
 </head>
 <body >
-    <nav class="home-nav">
+<nav class="home-nav">
         <div ><img class='logo' src="../html file/Amalajoint logo.jpg" alt=""></div>
         <div class="options">
             <div ><a href="../php files/home.php">Home</a></div>
@@ -33,21 +33,14 @@
         <div class="fader"></div>
         <div class="about-text">
             <div class="text_a">
-                <h1>AMALAJOINT Home from home</h1>
-                <br><br>
-                <h3>You can Search for Chef here</h3>
-                <br><br>
-                    <form method="post" action="chefsearch.php">
-                        <label>Recipe Name:</label>
-                        <input type="text" name="Chefname" />
-                        <br><br>
-                        <input type="submit" name="submit" value="Search " />
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="button" value="Reset" />
-                    </form>
-            </div>
-        </div>
-        <img class="bg1" src="../html file/image/amala2.jpeg" alt="">
+        
+    
+        <h1>INDIVIDUAL RECIPE</h1><br>
+               <?php include('fetchindividualrecipe.php'); ?>
+    </div>
+</div>
+
+    <img class="bg1" src="../html file/image/amala2.jpeg" alt="">
         
     </div>
     <div class='homeimages'>
@@ -63,3 +56,5 @@
 
 </body>
 </html>
+
+
