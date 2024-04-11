@@ -6,7 +6,7 @@
             include('connection.php');
           
             $Grouprecipename=$_POST['Grouprecipename'];
-            $sql = "SELECT * FROM grouprecipe WHERE Grouprecipename='$Grouprecipename'";
+            $sql = "SELECT * FROM grouprecipe WHERE Grouprecipename like'%$Grouprecipename%'";
                     $result = $db->query($sql);
 
                     if ($result->num_rows > 0) 

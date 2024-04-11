@@ -14,8 +14,18 @@ if(mysqli_num_rows($result) > 0) {
         if(!empty($row['image_name'])) {
             echo "<img src='test_upload/{$row['image_name']}' alt='Recipe Image' style='max-width: 350px; max-height: 350px;'>";
         }
-        echo "<h4 style='max-width: 450px; max-height: 450px;'>{$row['Ingredient']}</h4>";
-        echo "<h4 style='max-width: 450px; max-height: 450px;'>{$row['Directions']}</h4>";
+        // Check if 'Ingredient' key exists before accessing it
+        if(isset($row['Ingredients'])) {
+            echo "<h4 style='max-width: 450px; max-height: 450px;'>{$row['Ingredients']}</h4>";
+        } else {
+            echo "<h4 style='max-width: 450px; max-height: 450px;'>No Ingredients provided</h4>";
+        }
+        // Check if 'Directions' key exists before accessing it
+        if(isset($row['Directions'])) {
+            echo "<h4 style='max-width: 450px; max-height: 450px;'>{$row['Directions']}</h4>";
+        } else {
+            echo "<h4 style='max-width: 450px; max-height: 450px;'>No Directions provided</h4>";
+        }
         echo "<hr>";
     }
 } else {

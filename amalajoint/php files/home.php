@@ -55,12 +55,7 @@
         <img src="../html file/image/offal meat.jpg" alt="">
         <img src="../html file/image/served beef stew.jpg" alt="">
     </div>
-    <div class='gprec'>
-        <h3>Amala and Egusi</h3>
-        <h3>Amala and Efo Riro Soup</h3>
-        <h3>Amala and Ewedu Soup</h3>
-        <h3>Amala and Abula Soup</h3>
-    </div>
+ 
    
 
 

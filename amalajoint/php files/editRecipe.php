@@ -6,7 +6,7 @@
             include('connection.php');
           
              $RecipeName=$_POST['RecipeName'];
-             $sql = "SELECT * FROM recipemethod WHERE RecipeName='$RecipeName'";
+             $sql = "SELECT * FROM recipemethod WHERE RecipeName like'%$RecipeName%'";
                     $result = $db->query($sql);
 
                     if ($result->num_rows > 0) 

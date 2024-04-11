@@ -30,6 +30,7 @@ if (isset($_POST['submit'])) {
         
         if (mysqli_query($con, $query)) {
             echo "Group recipe added successfully";
+            echo "<a href='Homechef.html'>Return to Home Page</a>";
         } else {
             echo "Error adding group recipe: " . mysqli_error($con);
         }
@@ -39,10 +40,10 @@ if (isset($_POST['submit'])) {
 }
 
 // Display uploaded images
-$query = mysqli_query($con, "SELECT * FROM grouprecipe");
-while ($row = mysqli_fetch_assoc($query)) {
-    echo '<img width="300" height="200" src="test_upload/' . $row['image_name'] . '" alt="Uploaded Image">';
-}
+//$query = mysqli_query($con, "SELECT * FROM grouprecipe");
+//while ($row = mysqli_fetch_assoc($query)) {
+   // echo '<img width="300" height="200" src="test_upload/' . $row['image_name'] . '" alt="Uploaded Image">';
+//}
 
 // Close connection
 mysqli_close($con);

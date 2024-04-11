@@ -18,7 +18,8 @@ if (isset($_POST['submit'])) {
         $chefname = $_POST['chefname'];
         $category = $_POST['category'];
         $RecipeName = $_POST['RecipeName'];
-        $Ingredient = $_POST['Ingredient'];
+        $Ingredients = $_POST['Ingredients'];
+        $Directions = $_POST['Directions'];
 
         // File upload handling
         $target_dir = "test_upload/";
@@ -29,11 +30,12 @@ if (isset($_POST['submit'])) {
             $image_path = $_FILES['image']['name'];
 
             // Insert data into recipemethod table
-            $query = "INSERT INTO recipemethod (chefname, category, RecipeName, Ingredient, image_name) VALUES ('$chefname', '$category', '$RecipeName', '$Ingredient', '$image_path')";
+            $query = "INSERT INTO recipemethod (chefname, category, RecipeName, Ingredients, Directions,image_name) VALUES ('$chefname', '$category', '$RecipeName', '$Ingredients', '$Directions','$image_path')";
             
             // Execute query and handle result
             if (mysqli_query($con, $query)) {
                 echo "Individual recipe added successfully";
+                echo "<a href='Homechef.html'>Return to Home Page</a>";
             } else {
                 echo "Error adding Individual Recipe: " . mysqli_error($con);
             }
